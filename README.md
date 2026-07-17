@@ -1,59 +1,208 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🍣 SushiGo — Aplikasi Pemesanan Sushi Berbasis Web
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> Aplikasi web pemesanan sushi modern yang dibangun menggunakan Laravel 12, dengan sistem manajemen menu, keranjang belanja, dan tracking status pesanan secara real-time.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Deskripsi Project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**SushiGo** adalah project UAS mata kuliah **Pemrograman Web 2** yang mengimplementasikan sistem pemesanan restoran sushi secara online. Aplikasi ini memiliki dua peran pengguna — **User (Pelanggan)** dan **Admin (Pengelola)** — dengan fitur lengkap mulai dari melihat menu hingga memproses pesanan.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Fitur Utama
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Fitur User (Pelanggan)
+- ✅ Register & Login
+- ✅ Melihat menu sushi dengan foto
+- ✅ Pencarian menu berdasarkan nama
+- ✅ Filter menu berdasarkan kategori
+- ✅ Melihat detail produk
+- ✅ Keranjang belanja (tambah, update, hapus item)
+- ✅ Checkout & konfirmasi pesanan
+- ✅ Riwayat pesanan
+- ✅ Tracking status pesanan dengan progress bar
+- ✅ Batalkan pesanan (status pending)
+- ✅ Edit profil (nama, email, telepon, alamat, password)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Fitur Admin
+- ✅ Dashboard statistik (menu, kategori, pesanan, user)
+- ✅ CRUD Kategori menu
+- ✅ CRUD Menu sushi + upload foto
+- ✅ Kelola semua pesanan
+- ✅ Update status pesanan (Pending → Diproses → Selesai)
+- ✅ Kelola data pengguna
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Teknologi yang Digunakan
 
-### Premium Partners
+| Teknologi | Versi | Fungsi |
+|-----------|-------|--------|
+| **Laravel** | 12.x | Backend Framework |
+| **PHP** | 8.2+ | Bahasa Pemrograman |
+| **Blade** | — | Template Engine |
+| **Tailwind CSS** | 3.x | CSS Framework |
+| **Alpine.js** | 3.x | JavaScript Interaktif |
+| **MySQL** | 8.x | Database |
+| **Laravel Breeze** | — | Autentikasi |
+| **Vite** | — | Asset Bundler |
+| **XAMPP** | — | Local Server |
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## Cara Instalasi
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prasyarat
+- PHP >= 8.2
+- Composer
+- Node.js & NPM
+- MySQL (XAMPP)
+- Git
 
-## Code of Conduct
+### Langkah Instalasi
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**1. Clone repository**
+```bash
+git clone https://github.com/cndy56/sushigo.git
+cd sushigo
+```
 
-## Security Vulnerabilities
+**2. Install dependensi PHP**
+```bash
+composer install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+**3. Install dependensi Node.js**
+```bash
+npm install
+```
 
-## License
+**4. Salin file environment**
+```bash
+cp .env.example .env
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**5. Generate application key**
+```bash
+php artisan key:generate
+```
+
+**6. Konfigurasi database**
+
+Buka file `.env` dan sesuaikan:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=sushigo_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+**7. Buat database**
+
+Buka **phpMyAdmin** → buat database baru bernama `sushigo_db`
+
+**8. Jalankan migration & seeder**
+```bash
+php artisan migrate --seed
+```
+
+**9. Buat symlink storage**
+```bash
+php artisan storage:link
+```
+
+**10. Build aset Tailwind CSS**
+```bash
+npm run build
+```
+
+**11. Jalankan aplikasi**
+```bash
+php artisan serve
+```
+
+Buka browser → `http://127.0.0.1:8000`
+
+---
+
+## 👥 Akun Demo
+
+| Role | Email | Password |
+|------|-------|----------|
+| 👑 **Admin** | admin@sushigo.com | password |
+| 👤 **User** | user@sushigo.com | password |
+
+---
+
+## 📁 Struktur Folder
+
+```
+sushigo/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Admin/          # Controller admin
+│   │   │   ├── HomeController.php
+│   │   │   ├── MenuController.php
+│   │   │   ├── CartController.php
+│   │   │   ├── CheckoutController.php
+│   │   │   └── OrderController.php
+│   │   └── Middleware/
+│   │       └── AdminMiddleware.php
+│   └── Models/                 # User, Product, Cart, Order, dll
+├── database/
+│   ├── migrations/             # Schema tabel database
+│   └── seeders/                # Data awal (admin, kategori, produk)
+├── resources/
+│   └── views/
+│       ├── layouts/            # Layout admin & user
+│       ├── admin/              # Halaman admin
+│       ├── menu/               # Halaman menu
+│       ├── cart/               # Halaman keranjang
+│       ├── checkout/           # Halaman checkout
+│       ├── orders/             # Halaman pesanan
+│       └── home.blade.php      # Halaman utama
+└── routes/
+    └── web.php                 # Definisi route aplikasi
+```
+
+---
+
+## Database
+
+Aplikasi menggunakan **7 tabel utama**:
+
+| Tabel | Fungsi |
+|-------|--------|
+| `users` | Data pengguna & role |
+| `categories` | Kategori menu sushi |
+| `products` | Data menu sushi |
+| `carts` | Keranjang belanja user |
+| `cart_items` | Item dalam keranjang |
+| `orders` | Data pesanan |
+| `order_details` | Detail item per pesanan |
+
+---
+
+## 👨‍💻 Developer
+
+| | |
+|---|---|
+| **Nama** | [Cindy Aulia Rakhma] |
+| **NIM** | [2410010108] |
+| **Kelas** | [4A Teknik Informatika] |
+| **Mata Kuliah** | Pemrograman Web 2 |
+| **Institusi** | [UNISKA] |
+
+---
+
+## 📄 Lisensi
+
+Project ini dibuat untuk keperluan akademik (UAS Pemrograman Web 2).
+
+---
+
+<p align="center">🍣 Dibuat dengan ❤️ menggunakan Laravel 12</p>
