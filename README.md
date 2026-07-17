@@ -128,7 +128,7 @@ Buka browser → `http://127.0.0.1:8000`
 
 ---
 
-## 👥 Akun Demo
+## Akun Demo
 
 | Role | Email | Password |
 |------|-------|----------|
@@ -137,7 +137,7 @@ Buka browser → `http://127.0.0.1:8000`
 
 ---
 
-## 📁 Struktur Folder
+## Struktur Folder
 
 ```
 sushigo/
@@ -199,10 +199,10 @@ Aplikasi menggunakan **7 tabel utama**:
 
 ---
 
-## 📄 Lisensi
+## Lisensi
 
 Project ini dibuat untuk keperluan akademik (UAS Pemrograman Web 2).
 
 ---
 
-<p align="center">🍣 Dibuat dengan ❤️ menggunakan Laravel 12</p>
+🍣 Dibuat dengan ❤️ menggunakan Laravel 12
